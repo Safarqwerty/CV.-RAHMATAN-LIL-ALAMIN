@@ -8,14 +8,6 @@
     <title>CV. RAHMATAN LIL ALAMIN</title>
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="shortcut icon" href="./public/img/logo.png">
-    <script>
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
 </head>
 
 <body>
@@ -42,22 +34,18 @@
                             </li>
                             <li class="group">
                                 <a href="#about"
-                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Tentang</a>
+                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Profil Perusahaan</a>
                             </li>
                             <li class="group">
                                 <a href="#portofolio"
-                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Portofolio</a>
+                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Layanan</a>
                             </li>
                             <li class="group">
                                 <a href="#klien"
-                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Pengguna</a>
+                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Galeri</a>
                             </li>
                             <li class="group">
                                 <a href="#blog"
-                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Blog</a>
-                            </li>
-                            <li class="group">
-                                <a href="#kontak"
                                     class="text-base py-2 mx-8 flex group-hover:text-primary">Kontak</a>
                             </li>
                         </ul>
