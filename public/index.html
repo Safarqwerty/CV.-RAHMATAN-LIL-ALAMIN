@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV. RAHMATAN LIL ALAMIN</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo.png">
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between relative">
+                <div class="flex items-center px-4 space-x-4">
+                    <img src="img/logo.png" alt="Logo" class="h-12">
+                    <a href="#home" class="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-[#014BAE] to-[#DF6114] block py-6">CV. RAHMATAN LIL ALAMIN</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line block h-1 w-6 bg-black my-1"></span>
+                        <span class="hamburger-line block h-1 w-6 bg-black my-1"></span>
+                        <span class="hamburger-line block h-1 w-6 bg-black my-1"></span>
+                    </button>
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 bg-white shadow-lg dark:bg-dark lg:dark:bg-transparent dark:shadow-slate-500 rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#home"
+                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Beranda</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about"
+                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Tentang</a>
+                            </li>
+                            <li class="group">
+                                <a href="#portofolio"
+                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Portofolio</a>
+                            </li>
+                            <li class="group">
+                                <a href="#klien"
+                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Pengguna</a>
+                            </li>
+                            <li class="group">
+                                <a href="#blog"
+                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Blog</a>
+                            </li>
+                            <li class="group">
+                                <a href="#kontak"
+                                    class="text-base py-2 mx-8 flex group-hover:text-primary">Kontak</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- /header -->
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
