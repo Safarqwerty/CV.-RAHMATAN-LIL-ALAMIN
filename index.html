@@ -12,7 +12,7 @@
 
 <body>
     <!-- header -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <header class="bg-white absolute top-0 left-0 w-full flex items-center z-10">
         <div class="container mx-auto">
             <div class="flex items-center justify-between relative">
                 <div class="flex items-center px-4 space-x-4">
@@ -61,27 +61,27 @@
     <!-- /header -->
 
     <!-- Hero Section -->
-    <section class="relative">
+    <section class="relative top-10 lg:top-0">
         <div class="overflow-hidden relative w-full h-screen">
             <div id="slider" class="flex transition-transform duration-300 ease-in-out h-full">
                 <div class="min-w-full h-full">
-                    <img src="./public/img/gambar1.jpg" alt="Image 1" class="w-full h-full object-cover">
+                    <img src="./public/img/gambar1.jpg" alt="Image 1" class="lg:w-full lg:h-full object-cover">
                 </div>
                 <div class="min-w-full h-full">
-                    <img src="./public/img/gambar2.jpg" alt="Image 2" class="w-full h-full object-cover">
+                    <img src="./public/img/gambar2.jpg" alt="Image 2" class="lg:w-full lg:h-full object-cover">
                 </div>
                 <div class="min-w-full h-full">
-                    <img src="./public/img/gambar3.jpg" alt="Image 3" class="w-full h-full object-cover">
+                    <img src="./public/img/gambar3.jpg" alt="Image 3" class="lg:w-full lg:h-full object-cover">
                 </div>
             </div>
 
             <!-- Navigation Buttons -->
             <button id="prev"
-                class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-100 text-black px-4 py-2">
+                class="absolute lg:top-1/2 top-1/5 left-5 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-100 text-black px-4 py-2 rounded-full shadow-lg">
                 &#10094;
             </button>
             <button id="next"
-                class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-100 text-black px-4 py-2">
+                class="absolute lg:top-1/2 top-1/5 right-5 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-100 text-black px-4 py-2 rounded-full shadow-lg">
                 &#10095;
             </button>
         </div>

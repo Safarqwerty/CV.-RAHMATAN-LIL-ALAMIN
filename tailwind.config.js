@@ -13,6 +13,9 @@ module.exports = {
         secondary: "#64748b",
         dark: "#1E1E1E",
       },
+      spacing: {
+        '1/5': '18%',
+      },
       screens: {
         "2xl": "1320px",
       },
