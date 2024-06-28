@@ -1,56 +1,52 @@
-// Navbar Fixed
-window.onscroll = function () {
-    const header = document.querySelector('header')
-    const fixedNav = header.offsetTop
-    const otwTop = document.querySelector('#otw-top')
+document.addEventListener('DOMContentLoaded', function () {
+    // Navbar Fixed
+    window.onscroll = function () {
+        const header = document.querySelector('header');
+        const fixedNav = header.offsetTop;
+        const otwTop = document.querySelector('#otw-top');
 
-    if (window.pageYOffset > fixedNav) {
-        header.classList.add('navbar-fixed')
-        otwTop.classList.remove('hidden')
-        otwTop.classList.add('flex')
-    } else {
-        header.classList.remove('navbar-fixed')
-        otwTop.classList.remove('flex')
-        otwTop.classList.add('hidden')
-    }
-}
+        if (window.pageYOffset > fixedNav) {
+            header.classList.add('navbar-fixed');
+            otwTop.classList.remove('hidden');
+            otwTop.classList.add('flex');
+        } else {
+            header.classList.remove('navbar-fixed');
+            otwTop.classList.remove('flex');
+            otwTop.classList.add('hidden');
+        }
+    };
 
-// Hamburger
-const hamburger = document.querySelector('#hamburger')
-const navMenu = document.querySelector('#nav-menu')
+    // Hamburger
+    const hamburger = document.querySelector('#hamburger');
+    const navMenu = document.querySelector('#nav-menu');
 
-hamburger.addEventListener('click', function () {
-    hamburger.classList.toggle('hamburger-active')
-    navMenu.classList.toggle('hidden')
-})
+    hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('hamburger-active');
+        navMenu.classList.toggle('hidden');
+    });
 
-// hilangkan menu mobile
-window.addEventListener('click', function (e) {
-    if (e.target != hamburger && e.target != navMenu) {
-        hamburger.classList.remove('hamburger-active');
-        navMenu.classList.add('hidden');
-    }
-})
+    // Hilangkan menu mobile saat klik di luar
+    window.addEventListener('click', function (e) {
+        if (e.target !== hamburger && !hamburger.contains(e.target) && e.target !== navMenu && !navMenu.contains(e.target)) {
+            hamburger.classList.remove('hamburger-active');
+            navMenu.classList.add('hidden');
+        }
+    });
 
-//darkmode
-const darkToggle = document.querySelector('#dark-toggle');
-const html = document.querySelector('html')
+    // Slider section hero
+    let currentIndex = 0;
 
-darkToggle.addEventListener('click', function () {
-    if (darkToggle.checked) {
-        html.classList.add('dark')
-        localStorage.theme = 'dark'
-    }
-    else {
-        html.classList.remove('dark')
-        localStorage.theme = 'light'
-    }
-})
+    document.getElementById('next').addEventListener('click', () => {
+        const slider = document.getElementById('slider');
+        const slides = slider.children.length;
+        currentIndex = (currentIndex + 1) % slides;
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
 
-// pindahkan toogle sesuai mode
-// Saat memuat halaman atau saat mengganti tema, sebaiknya tambahkan inline di `head` untuk menghindari FOUC
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    darkToggle.checked = true
-} else {
-    darkToggle.checked = false
-}
+    document.getElementById('prev').addEventListener('click', () => {
+        const slider = document.getElementById('slider');
+        const slides = slider.children.length;
+        currentIndex = (currentIndex - 1 + slides) % slides;
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+});

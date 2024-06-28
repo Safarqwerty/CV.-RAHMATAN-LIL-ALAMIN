@@ -21,7 +21,6 @@
                         class="font-bold text-base sm:text-lg text-transparent bg-clip-text bg-gradient-to-r from-[#014BAE] to-[#DF6114] block py-6">
                         CV. RAHMATAN LIL ALAMIN
                     </a>
-
                 </div>
                 <div class="flex items-center px-4">
                     <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
@@ -55,12 +54,38 @@
                             </li>
                         </ul>
                     </nav>
-
                 </div>
             </div>
         </div>
     </header>
     <!-- /header -->
+
+    <!-- Hero Section -->
+    <section class="relative">
+        <div class="overflow-hidden relative w-full h-screen">
+            <div id="slider" class="flex transition-transform duration-300 ease-in-out h-full">
+                <div class="min-w-full h-full">
+                    <img src="./public/img/gambar1.jpg" alt="Image 1" class="w-full h-full object-cover">
+                </div>
+                <div class="min-w-full h-full">
+                    <img src="./public/img/gambar2.jpg" alt="Image 2" class="w-full h-full object-cover">
+                </div>
+                <div class="min-w-full h-full">
+                    <img src="./public/img/gambar3.jpg" alt="Image 3" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button id="prev"
+                class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-100 text-black px-4 py-2">
+                &#10094;
+            </button>
+            <button id="next"
+                class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-100 text-black px-4 py-2">
+                &#10095;
+            </button>
+        </div>
+    </section>
 
     <script src="./public/js/script.js"></script>
 </body>
