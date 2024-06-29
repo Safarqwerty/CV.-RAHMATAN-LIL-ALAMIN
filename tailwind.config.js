@@ -15,6 +15,7 @@ module.exports = {
       },
       spacing: {
         '1/5': '18%',
+        '75': '23.7%',
       },
       screens: {
         "2xl": "1320px",
