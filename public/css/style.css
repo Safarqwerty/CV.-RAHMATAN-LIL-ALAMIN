@@ -728,6 +728,14 @@ video {
   height: 100%;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -738,6 +746,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .min-w-full {
@@ -787,6 +799,18 @@ video {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -797,6 +821,10 @@ video {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .rounded-b-lg {
@@ -963,6 +991,10 @@ video {
 
 .font-normal {
   font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .uppercase {
@@ -1184,6 +1216,12 @@ video {
 
   .lg\:max-w-full {
     max-width: 100%;
+  }
+
+  .lg\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:rounded-none {
