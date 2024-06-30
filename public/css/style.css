@@ -640,6 +640,10 @@ video {
   top: 100%;
 }
 
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1406,8 +1410,20 @@ video {
     height: 4rem;
   }
 
+  .max-sm\:h-1 {
+    height: 0.25rem;
+  }
+
+  .max-sm\:h-20 {
+    height: 5rem;
+  }
+
   .max-sm\:w-16 {
     width: 4rem;
+  }
+
+  .max-sm\:w-20 {
+    width: 5rem;
   }
 
   .max-sm\:bg-opacity-50 {
