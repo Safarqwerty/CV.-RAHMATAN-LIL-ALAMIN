@@ -31,3 +31,29 @@ document.getElementById('prev').addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + slides) % slides;
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 });
+
+//pojek 
+document.addEventListener("DOMContentLoaded", function () {
+    let currentIndex = 0;
+    const images = [
+        './public/img/proyek1.jpg',
+        './public/img/proyek2.jpg',
+        './public/img/proyek3.jpg',
+    ];
+
+    const imgElement = document.getElementById('projectImage');
+    const nextButton = document.getElementById('nextButton');
+
+    function updateImage(index) {
+        imgElement.src = images[index];
+    }
+
+    nextButton.addEventListener('click', function () {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage(currentIndex);
+    });
+
+    // Initialize with the first image
+    updateImage(currentIndex);
+});
+
