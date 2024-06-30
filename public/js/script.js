@@ -55,7 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextButton = document.getElementById('nextButton');
 
     function updateImage(index) {
-        imgElement.src = images[index];
+        imgElement.classList.add('opacity-0');
+        setTimeout(() => {
+            imgElement.src = images[index];
+            imgElement.classList.remove('opacity-0');
+        }, 100); // Delay to match the transition duration
     }
 
     nextButton.addEventListener('click', function () {
@@ -67,3 +71,28 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImage(currentIndex);
 });
 
+
+// otwtop
+document.addEventListener('DOMContentLoaded', function() {
+    const otwTopButton = document.getElementById('otw-top');
+
+    // Menampilkan tombol ketika scroll mencapai jarak tertentu
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) { // Ubah angka 300 sesuai dengan kebutuhan jarak scroll
+            otwTopButton.classList.add('block');
+            otwTopButton.classList.remove('hidden');
+        } else {
+            otwTopButton.classList.add('hidden');
+            otwTopButton.classList.remove('block');
+        }
+    });
+
+    // Mengatur aksi scroll ke atas saat tombol diklik
+    otwTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Untuk smooth scroll, jika tidak diperlukan, ganti menjadi 'auto'
+        });
+    });
+});
