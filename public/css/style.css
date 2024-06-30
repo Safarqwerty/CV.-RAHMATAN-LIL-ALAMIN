@@ -1233,6 +1233,10 @@ video {
   .max-sm\:w-16 {
     width: 4rem;
   }
+
+  .max-sm\:bg-opacity-50 {
+    --tw-bg-opacity: 0.5;
+  }
 }
 
 @media (min-width: 640px) {
