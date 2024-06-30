@@ -73,11 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // otwtop
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const otwTopButton = document.getElementById('otw-top');
 
     // Menampilkan tombol ketika scroll mencapai jarak tertentu
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 300) { // Ubah angka 300 sesuai dengan kebutuhan jarak scroll
             otwTopButton.classList.add('block');
             otwTopButton.classList.remove('hidden');
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Mengatur aksi scroll ke atas saat tombol diklik
-    otwTopButton.addEventListener('click', function(e) {
+    otwTopButton.addEventListener('click', function (e) {
         e.preventDefault();
         window.scrollTo({
             top: 0,
