@@ -18,19 +18,29 @@ window.addEventListener('click', function (e) {
 // Slider section hero
 let currentIndex = 0;
 
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const slider = document.getElementById('slider');
+const slides = slider.children.length;
+
+function updateButtons() {
+    prevButton.classList.toggle('hidden', currentIndex === 0);
+    nextButton.classList.toggle('hidden', currentIndex === slides - 1);
+}
+
 document.getElementById('next').addEventListener('click', () => {
-    const slider = document.getElementById('slider');
-    const slides = slider.children.length;
     currentIndex = (currentIndex + 1) % slides;
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateButtons();
 });
 
 document.getElementById('prev').addEventListener('click', () => {
-    const slider = document.getElementById('slider');
-    const slides = slider.children.length;
     currentIndex = (currentIndex - 1 + slides) % slides;
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateButtons();
 });
+
+updateButtons();
 
 //pojek 
 document.addEventListener("DOMContentLoaded", function () {
