@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImage(currentIndex);
 });
 
+// bagan
 
 // otwtop
 document.addEventListener('DOMContentLoaded', function () {
