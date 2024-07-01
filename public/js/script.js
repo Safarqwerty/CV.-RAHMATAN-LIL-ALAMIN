@@ -9,7 +9,7 @@ hamburger.addEventListener('click', function () {
 
 // Hilangkan menu mobile saat klik di luar
 window.addEventListener('click', function (e) {
-    if (e.target !== hamburger && !hamburger.contains(e.target) && e.target !== navMenu && !navMenu.contains(e.target)) {
+    if (e.target != hamburger && e.target != navMenu) {
         hamburger.classList.remove('hamburger-active');
         navMenu.classList.add('hidden');
     }
@@ -93,5 +93,17 @@ document.addEventListener('DOMContentLoaded', function () {
             top: 0,
             behavior: 'smooth' // Untuk smooth scroll, jika tidak diperlukan, ganti menjadi 'auto'
         });
+    });
+});
+
+//pilih kami
+document.addEventListener('scroll', function () {
+    const elements = document.querySelectorAll('.transform');
+    elements.forEach(element => {
+        const position = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        if (position < screenPosition) {
+            element.classList.add('scale-105');
+        }
     });
 });
