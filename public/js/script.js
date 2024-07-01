@@ -71,8 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImage(currentIndex);
 });
 
-// bagan
-
 // otwtop
 document.addEventListener('DOMContentLoaded', function () {
     const otwTopButton = document.getElementById('otw-top');
