@@ -42,33 +42,30 @@ document.getElementById('prev').addEventListener('click', () => {
 
 updateButtons();
 
-//pojek 
-document.addEventListener("DOMContentLoaded", function () {
+//projek 
+document.addEventListener('DOMContentLoaded', function () {
+    const slide = document.getElementById('slide');
+    const nextButton = document.getElementById('maju');
+    const backButton = document.getElementById('back');
     let currentIndex = 0;
-    const images = [
-        './public/img/proyek1.jpg',
-        './public/img/proyek2.jpg',
-        './public/img/proyek3.jpg',
-    ];
+    let slideWidth;
 
-    const imgElement = document.getElementById('projectImage');
-    const nextButton = document.getElementById('nextButton');
+    const updateSlideWidth = () => {
+        slideWidth = slide.children[0].offsetWidth;
+    };
 
-    function updateImage(index) {
-        imgElement.classList.add('opacity-0');
-        setTimeout(() => {
-            imgElement.src = images[index];
-            imgElement.classList.remove('opacity-0');
-        }, 100); // Delay to match the transition duration
-    }
+    window.addEventListener('resize', updateSlideWidth);
+    updateSlideWidth();
 
-    nextButton.addEventListener('click', function () {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateImage(currentIndex);
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slide.children.length;
+        slide.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     });
 
-    // Initialize with the first image
-    updateImage(currentIndex);
+    backButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slide.children.length) % slide.children.length;
+        slide.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    });
 });
 
 // otwtop
