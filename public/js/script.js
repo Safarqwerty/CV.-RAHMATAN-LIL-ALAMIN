@@ -1,19 +1,30 @@
 // Hamburger
 const hamburger = document.querySelector('#hamburger');
 const navMenu = document.querySelector('#nav-menu');
+const menuLinks = navMenu.querySelectorAll('a');
 
-hamburger.addEventListener('click', function () {
+hamburger.addEventListener('click', function (e) {
+    e.stopPropagation();
     hamburger.classList.toggle('hamburger-active');
     navMenu.classList.toggle('hidden');
 });
 
-// Hilangkan menu mobile saat klik di luar
 window.addEventListener('click', function (e) {
-    if (e.target != hamburger && e.target != navMenu) {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
         hamburger.classList.remove('hamburger-active');
         navMenu.classList.add('hidden');
     }
 });
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.stopPropagation();
+        hamburger.classList.remove('hamburger-active');
+        navMenu.classList.add('hidden');
+    });
+});
+
+
 
 // Slider section hero
 let currentIndex = 0;
